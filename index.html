@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>زيوت طبيعية للشعر</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  background:#f6f6f6;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+header{
+  text-align:center;
+  margin-bottom:25px;
+}
+header h1{color:#1f7a4d;}
+
+.badges{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:15px;
+}
+.badge{
+  background:#e8f8f1;
+  color:#1f7a4d;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+.product{
+  background:#fff;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,.08);
+  text-align:center;
+  cursor:pointer;
+  transition:0.2s;
+}
+.product.active{
+  border:2px solid #25d366;
+  box-shadow:0 0 15px rgba(37,211,102,.4);
+}
+.product img{
+  width:100%;
+  border-radius:10px;
+}
+.product h3{
+  margin:10px 0 5px;
+}
+.product p{
+  font-size:14px;
+  color:#555;
+}
+.price{
+  color:#c0392b;
+  font-weight:bold;
+  margin:8px 0;
+}
+
+form{
+  background:#fff;
+  margin-top:30px;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,.08);
+}
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+.total{
+  font-size:18px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+button{
+  background:#25d366;
+  color:#fff;
+  padding:14px;
+  border:none;
+  width:100%;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{background:#1ebe5d;}
+
+.testimonials{
+  margin-top:40px;
+}
+.testimonial{
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:15px;
+  box-shadow:0 0 8px rgba(0,0,0,.07);
+}
+
+footer{
+  text-align:center;
+  margin-top:30px;
+  font-size:14px;
+  color:#777;
+}
+
+/* زر واتساب ثابت */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  text-decoration:none;
+  box-shadow:0 0 12px rgba(0,0,0,.3);
+  z-index:1000;
+}
+.whatsapp-float:hover{
+  background:#1ebe5d;
+}
+</style>
+</head>
+
+<body>
+
+<a class="whatsapp-float" href="https://wa.me/212764884000" target="_blank">💬</a>
+
+<div class="container">
+
+<header>
+  <h1>زيوت طبيعية 100% للشعر</h1>
+  <p>تقوية – تطويل – علاج تساقط الشعر</p>
+
+  <div class="badges">
+    <div class="badge">🟢 منتج طبيعي</div>
+    <div class="badge">🚚 توصيل سريع</div>
+    <div class="badge">💰 الدفع عند الاستلام</div>
+  </div>
+</header>
+
+<section class="products">
+
+  <div class="product" onclick="toggleProduct(this)">
+    <input type="checkbox" data-price="80" value="زيت الشعر  - 80 درهم" hidden>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidV5x6U0WJS-n9koyo24V7ajnDlnoFj7bWfQS5cneerhjA5LbuuUpMQXqglVRP61iiwuZsZKWOSjL8vhhJzjsZGXsat4FzVDARIC_YD75NaNSSpLWBrELRuHgiCxxz6rR7dtsaV8zaUXtqZPbyKxtz3ju8zQEdmwX-jyf114B7F2xUa3E0sfDUQQGfoP8n/s320/Screenshot_20260203_194743_Gallery.jpg">
+    <h3> التركيبة الشاملة 3 في 1</h3>
+    <p>يغذي الشعر ويقويه ويمنع التقصف</p>
+    <div class="price">80 درهم</div>
+  </div>
+
+  <div class="product" onclick="toggleProduct(this)">
+    <input type="checkbox" data-price="60" value="زيت الشعر بالخروع - 60 درهم" hidden>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-CyMHIxzRQpFhn8QSYLms_SJcZNGVWEczCGZT6aeUKPxlTM8H8i5fgGPmrTssUDa29TQxbLOvIrgRtvOjTTk5lRBzOtP06a198OIMXKTY27TzGxvP_w1KanBE2NCu2Qemm1EE31d8omXsaOy1hoIr_dVQe1NGABtbrH86H0ho4ulKftqtmRCXhJxbOFM9/s320/Screenshot_20260203_194731_Gallery.jpg">
+    <h3>زيت الشعر بالخروع</h3>
+    <p>يساعد على تطويل الشعر وتقويته</p>
+    <div class="price">60 درهم</div>
+  </div>
+
+  <div class="product" onclick="toggleProduct(this)">
+    <input type="checkbox" data-price="70" value="زيت الشعر بالحبة السوداء - 70 درهم" hidden>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeyOKo3Pc2RvM0jwTPRkfAPx2AJXVG85slWkKsy3uuesoQTYkktZr6rs2ntHNd3z1c2B5hmZNdm522zQHh-QNbKALaeTaR6oaxVh1tGFNjGsrGDfkret-NRq1dCCDV6Qngst4C2xdn3R5nsMkeEJQacLr5b2oGBypm1wKswE0XVdt-VaXAGVDez6m5kxi-/s320/Screenshot_20260203_194733_Gallery.jpg">
+    <h3>زيت الشعر بالحبة السوداء</h3>
+    <p>يعالج التساقط ويغذي فروة الرأس</p>
+    <div class="price">70 درهم</div>
+  </div>
+
+  <div class="product" onclick="toggleProduct(this)">
+    <input type="checkbox" data-price="65" value="زيت الشعر باللوز - 65 درهم" hidden>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJidPw6Uu0pqcuqdWF2nalLPlyM0df_L_2TRwaJAQPSVlq57EXE42glORROgVGoxp8lGdem5YsaUdYWM0Bz2_KnZya9R6q7Ere2z9pllw6HIS8fQ4auAiV2EKvfyvXEdSila3hXQNxO2C7jEfvWqNP2F9L8JThRbADRjVodjUc1nJv78hKtl5Z7ZdApA-Z/s320/Screenshot_20260203_194736_Gallery.jpg">
+    <h3>زيت الشعر باللوز</h3>
+    <p>ينعم الشعر ويمنحه لمعان طبيعي</p>
+    <div class="price">65 درهم</div>
+  </div>
+
+</section>
+
+<form onsubmit="sendWhatsApp();return false;">
+  <h2>معلومات الطلب</h2>
+
+  <input id="name" placeholder="الاسم الكامل" required>
+  <input id="phone" placeholder="رقم الهاتف" required>
+  <input id="city" placeholder="المدينة" required>
+  <textarea id="address" placeholder="العنوان الكامل" required></textarea>
+
+  <div class="total">💰 المجموع: <span id="total">0</span> درهم</div>
+
+  <button type="submit">تأكيد الطلب عبر واتساب</button>
+</form>
+
+<section class="testimonials">
+  <h2>⭐ آراء الزبناء</h2>
+
+  <div class="testimonial">
+    "النتيجة باينة من الأسبوع الأول، منتج زوين بزاف" – سميرة / فاس
+  </div>
+  <div class="testimonial">
+    "تعامل محترم وتوصيل سريع، غادي نعاود نطلب" – حمزة / الدار البيضاء
+  </div>
+  <div class="testimonial">
+    "شعري ولى ناعم وقوي الحمد لله" – خديجة / مراكش
+  </div>
+</section>
+
+<footer>© 2026 جميع الحقوق محفوظة</footer>
+
+</div>
+
+<script>
+function toggleProduct(card){
+  const checkbox = card.querySelector('input[type="checkbox"]');
+  checkbox.checked = !checkbox.checked;
+  card.classList.toggle('active');
+  updateTotal();
+}
+
+function updateTotal(){
+  let total = 0;
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb=>{
+    if(cb.checked){
+      total += parseInt(cb.dataset.price);
+    }
+  });
+  document.getElementById("total").innerText = total;
+}
+
+function sendWhatsApp(){
+  let selected = [];
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb=>{
+    if(cb.checked) selected.push(cb.value);
+  });
+
+  if(selected.length === 0){
+    alert("المرجو اختيار منتج واحد على الأقل");
+    return;
+  }
+
+  let msg =
+  "🛒 *طلب جديد*%0A%0A"+
+  "👤 الاسم: "+name.value+"%0A"+
+  "📞 الهاتف: "+phone.value+"%0A"+
+  "🏙 المدينة: "+city.value+"%0A"+
+  "📍 العنوان: "+address.value+"%0A%0A"+
+  "🧴 المنتجات:%0A- "+selected.join("%0A- ")+"%0A%0A"+
+  "💰 المجموع: "+document.getElementById("total").innerText+" درهم%0A"+
+  "💳 الدفع عند الاستلام";
+
+  window.open("https://wa.me/212764884000?text="+msg,"_blank");
+}
+</script>
+
+</body>
+</html>
