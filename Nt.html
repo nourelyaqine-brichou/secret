@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>زيوت طبيعية للشعر</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  background:#f6f6f6;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+header{
+  text-align:center;
+  margin-bottom:30px;
+}
+header h1{color:#1f7a4d;}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+.product{
+  background:#fff;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,.08);
+  text-align:center;
+}
+.product img{
+  width:100%;
+  border-radius:10px;
+}
+.price{
+  color:#c0392b;
+  font-weight:bold;
+  margin:8px 0;
+}
+
+form{
+  background:#fff;
+  margin-top:30px;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,.08);
+}
+input,textarea,select{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+.total{
+  font-size:18px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+button{
+  background:#25d366;
+  color:#fff;
+  padding:14px;
+  border:none;
+  width:100%;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{background:#1ebe5d;}
+
+.testimonials{
+  margin-top:40px;
+}
+.testimonial{
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:15px;
+  box-shadow:0 0 8px rgba(0,0,0,.07);
+}
+footer{
+  text-align:center;
+  margin-top:30px;
+  font-size:14px;
+  color:#777;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <h1>زيوت طبيعية 100% للشعر</h1>
+  <p>تقوية وتطويل وعلاج تساقط الشعر</p>
+</header>
+
+<section class="products">
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be">
+    <label><input type="checkbox" data-price="80" value="زيت الأركان - 80 درهم"> زيت الأركان</label>
+    <div class="price">80 درهم</div>
+  </div>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1615486364462-ef6363adbc18">
+    <label><input type="checkbox" data-price="60" value="زيت الخروع - 60 درهم"> زيت الخروع</label>
+    <div class="price">60 درهم</div>
+  </div>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+    <label><input type="checkbox" data-price="70" value="زيت الحبة السوداء - 70 درهم"> زيت الحبة السوداء</label>
+    <div class="price">70 درهم</div>
+  </div>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46b3">
+    <label><input type="checkbox" data-price="65" value="زيت اللوز - 65 درهم"> زيت اللوز</label>
+    <div class="price">65 درهم</div>
+  </div>
+</section>
+
+<form onsubmit="sendWhatsApp();return false;">
+  <h2>معلومات الطلب</h2>
+
+  <input id="name" placeholder="الاسم الكامل" required>
+  <input id="phone" placeholder="رقم الهاتف" required>
+  <input id="city" placeholder="المدينة" required>
+  <textarea id="address" placeholder="العنوان الكامل" required></textarea>
+
+  <select id="payment">
+    <option value="الدفع عند الاستلام">🚚 الدفع عند الاستلام</option>
+  </select>
+
+  <div class="total">💰 المجموع: <span id="total">0</span> درهم</div>
+
+  <button type="submit">تأكيد الطلب عبر واتساب</button>
+</form>
+
+<section class="testimonials">
+  <h2>⭐ آراء الزبناء</h2>
+
+  <div class="testimonial">
+    "استعملت زيت الأركان والنتيجة رائعة بعد أسبوعين 👌" – سميرة / فاس
+  </div>
+
+  <div class="testimonial">
+    "منتج طبيعي وكيوقف التساقط فعلاً، توصيل سريع" – حمزة / الدار البيضاء
+  </div>
+
+  <div class="testimonial">
+    "ريحته زوينة والشعر ولى ناعم بزاف" – خديجة / مراكش
+  </div>
+</section>
+
+<footer>© 2026 جميع الحقوق محفوظة</footer>
+
+</div>
+
+<script>
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+checkboxes.forEach(cb => cb.addEventListener('change', updateTotal));
+
+function updateTotal(){
+  let total = 0;
+  checkboxes.forEach(cb=>{
+    if(cb.checked){
+      total += parseInt(cb.dataset.price);
+    }
+  });
+  document.getElementById("total").innerText = total;
+}
+
+function sendWhatsApp(){
+  let products=[];
+  let total=document.getElementById("total").innerText;
+
+  checkboxes.forEach(cb=>{
+    if(cb.checked) products.push(cb.value);
+  });
+
+  if(products.length===0){
+    alert("المرجو اختيار منتج واحد على الأقل");
+    return;
+  }
+
+  let msg =
+  "🛒 *طلب جديد*%0A%0A"+
+  "👤 الاسم: "+name.value+"%0A"+
+  "📞 الهاتف: "+phone.value+"%0A"+
+  "🏙 المدينة: "+city.value+"%0A"+
+  "📍 العنوان: "+address.value+"%0A"+
+  "💳 طريقة الدفع: الدفع عند الاستلام%0A%0A"+
+  "🧴 المنتجات:%0A- "+products.join("%0A- ")+"%0A%0A"+
+  "💰 المجموع: "+total+" درهم";
+
+  window.open("https://wa.me/212600212629?text="+msg,"_blank");
+}
+</script>
+
+</body>
+</html>
